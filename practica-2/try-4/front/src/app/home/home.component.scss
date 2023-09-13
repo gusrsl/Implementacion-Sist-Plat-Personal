@@ -1,0 +1,82 @@
+.custom-toolbar {
+  
+  background-color: #000000;
+  color: #fff;
+
+  .logo {
+    max-height: 40px;
+    margin-right: 20px;
+  }
+
+  .menu-button {
+    border: transparent solid;
+    margin-right: 5px;
+    justify-content: end;
+    background-color: transparent;
+    color: #fff;
+
+    &:hover {
+      background-color: #51687E;
+    }
+  }
+}
+
+.banner {
+  text-align: center;
+
+  .banner-image {
+    max-width: 100%;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  .home-content {
+    text-align: center;
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .card-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+
+      .card-image {
+        max-width: 100%;
+      }
+
+      .card-content {
+        padding: 20px;
+
+        h2 {
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
