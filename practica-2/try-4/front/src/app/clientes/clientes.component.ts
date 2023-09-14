@@ -38,10 +38,5 @@ export class ClientesComponent {
 
   // Función para actualizar el cliente
   updateCliente(): void {
-    // Aquí debes implementar la lógica para enviar la actualización a tu API
-    // Por ejemplo, puedes llamar a un método en tu servicio para actualizar el cliente
-    // this.apiService.updateCliente(this.selectedCliente).subscribe((response: any) => {
-    //   console.log('Cliente actualizado con éxito');
-    // });
   }
 }
