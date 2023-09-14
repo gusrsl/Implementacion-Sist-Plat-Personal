@@ -1,0 +1,171 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/* Estilos para el formulario */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  mat-card {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  /* Estilos para los botones */
+  button {
+    min-width: 120px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #007bff;
+    transform: scale(1.05);
+  }
+  
+  /* Estilos para los botones de colores */
+  button[color="primary"] {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  button[color="accent"] {
+    background-color: #ff6f61;
+    color: #fff;
+  }
+  
+  button[color="warn"] {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  /* Estilos para las animaciones de botones */
+  @keyframes buttonFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes buttonScale {
+    0% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Aplicar animaciones a los botones */
+  button {
+    animation: buttonFadeIn 0.5s ease-in-out both, buttonScale 0.3s ease-in-out both;
+  }
+  
+  /* Estilos para la tabla */
+  mat-table {
+    width: 200%;
+    overflow-x: auto;
+  }
+  
+  /* Estilos para las celdas de la tabla */
+  mat-cell, mat-header-cell {
+    text-align: center;
+  }
+  
+  /* Estilos para los botones de la tabla */
+  .actions button {
+    margin-right: 5px;
+  }
+  
+  /* Estilos para los botones de la tabla */
+  .actions button[color="warn"] {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  /* Aplicar animaciones a los botones de la tabla */
+  .actions button {
+    animation: buttonFadeIn 0.5s ease-in-out both, buttonScale 0.3s ease-in-out both;
+  }
+  
+
+  /* Estilos para el formulario */
+mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  button[type="submit"] {
+    margin-top: 16px;
+  }
+  
+  /* Estilos para la tabla */
+  .mat-table {
+    width: 100%;
+    table-layout: auto;
+  }
+  
+  .mat-column-acciones {
+    width: 120px; /* Ancho de la columna de acciones */
+  }
+  
+  /* Estilos para los botones en la tabla */
+  .mat-cell button {
+    margin-right: 8px;
+    font-size: 14px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &.mat-primary {
+      background-color: #1976d2;
+      color: white;
+    }
+  
+    &.mat-warn {
+      background-color: #f44336;
+      color: white;
+    }
+  
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+  }
+  
+  /* Estilos para el botón de eliminar específicamente */
+  .mat-cell button.mat-warn {
+    margin-right: 0;
+  }
+  
+  /* Estilos para el botón "Cancelar" en el formulario */
+  .actions button.mat-flat-button {
+    margin-right: 8px;
+  }
+  
+  /* Estilos para el botón "Guardar" en el formulario */
+  .actions button.mat-raised-button.mat-primary {
+    background-color: #1976d2;
+    color: white;
+  }
+  
+  .wide-card {
+    width: 150%; /* Ancho al 100% para aprovechar el espacio disponible */
+    overflow-x: auto; /* Habilita el desplazamiento horizontal si la tabla es más ancha que la tarjeta */
+  }

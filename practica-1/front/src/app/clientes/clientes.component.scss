@@ -1,0 +1,89 @@
+/* Estilo para el contenedor principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Estilo para el formulario de cliente */
+mat-card {
+  width: 100%; /* Ancho al 100% para ocupar todo el ancho disponible */
+  max-width: 800px; /* Establece un ancho máximo para el formulario */
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centra verticalmente los botones */
+    width: 100%; /* Asegura que los botones estén alineados correctamente */
+  }
+
+  .actions button {
+    flex: 1; /* Divide el espacio disponible entre los botones */
+  }
+
+  .actions button:first-child {
+    margin-right: 30px; /* Espacio entre el botón "Cancelar" y "Guardar" */
+  }
+
+  .actions button:last-child {
+    margin-left: 20px; /* Espacio entre el botón "Guardar" y "Cancelar" */
+  }
+}
+
+/* Estilo para la tabla de clientes */
+.wide-card {
+  width: 100%; /* Ancho al 100% para ocupar todo el ancho disponible */
+  max-width: 1200px; /* Establece un ancho máximo para el formulario */
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;  overflow-x: auto; /* Habilita el desplazamiento horizontal si la tabla es más ancha que la tarjeta */
+}
+
+/* Estilos para los botones */
+mat-raised-button,
+mat-flat-button,
+button.mat-button {
+  background-color: #007bff; /* Color de fondo principal */
+  color: #fff; /* Color de texto */
+  transition: background-color 0.3s ease; /* Animación de transición */
+  margin-right: 20px;
+}
+
+mat-raised-button:hover,
+mat-flat-button:hover,
+button.mat-button:hover {
+  background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para el botón de Guardar deshabilitado */
+button.mat-button:disabled {
+  background-color: #ccc; /* Color de fondo deshabilitado */
+  cursor: not-allowed; /* Cambia el cursor a "no permitido" */
+}
+
+/* Estilos para el botón Eliminar */
+button.mat-button.mat-warn {
+  background-color: #dc3545; /* Color de fondo para el botón de eliminación */
+}
+
+button.mat-button.mat-warn:hover {
+  background-color: #c82333; /* Color de fondo al pasar el mouse sobre el botón de eliminación */
+}
+/* Estilos para la tabla de clientes */
+.wide-card {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Estilo para el encabezado de la columna de acciones */
+mat-header-cell.mat-header-cell.acciones {
+  min-width: 120px; /* Ajusta el ancho mínimo según tus necesidades */
+  text-align: center; /* Centra el contenido en la celda */
+}

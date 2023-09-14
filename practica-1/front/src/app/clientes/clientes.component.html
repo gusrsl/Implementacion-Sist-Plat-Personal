@@ -1,0 +1,73 @@
+<div class="container">
+
+  <mat-card>
+  <!-- Formulario para agregar o editar cliente -->
+  <form [formGroup]="clienteForm" (ngSubmit)="onSubmit()">
+
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="nombre" placeholder="Ingrese el nombre">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Apellido</mat-label>
+      <input matInput formControlName="apellido" placeholder="Ingrese el apellido">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" placeholder="Ingrese el email" type="email">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Fecha de Nacimiento</mat-label>
+      <input matInput formControlName="fechaNacimiento" placeholder="YYYY-MM-DD" type="date">
+    </mat-form-field>
+
+    <!-- Puedes necesitar dropdowns o algún método para seleccionar la membresía y el coach. Asumiré un input simple por ahora. -->
+    <mat-form-field appearance="fill">
+      <mat-label>ID de Membresía</mat-label>
+      <input matInput formControlName="membresiaId" placeholder="Ingrese el ID de la membresía">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>ID de Coach</mat-label>
+      <input matInput formControlName="coachId" placeholder="Ingrese el ID del coach">
+    </mat-form-field>
+    <div class="actions">
+    <button mat-raised-button color="primary" type="submit" *ngIf="!selectedCliente">Agregar Cliente</button>
+    <button mat-raised-button color="primary" type="submit" *ngIf="selectedCliente">Actualizar Cliente</button>
+  </div>
+  <br>
+    <div class="actions">
+      <button mat-flat-button color="accent" type="reset" (click)="cancelEdit()">Cancelar</button>
+    </div>
+  </form>
+  </mat-card>
+
+  <br><br>
+
+  <mat-card class="wide-card" style="overflow-x: auto; width: 2500px;">
+  <!-- Tabla para mostrar clientes -->
+  <mat-table [dataSource]="dataSource">
+
+    <!-- Columnas dinámicas -->
+    <ng-container *ngFor="let column of displayedColumns" [matColumnDef]="column">
+      <mat-header-cell *matHeaderCellDef> {{column}} </mat-header-cell>
+      <mat-cell *matCellDef="let cliente"> {{cliente[column]}} </mat-cell>
+    </ng-container>
+
+    <!-- Acciones (editar, eliminar) -->
+    <ng-container matColumnDef="acciones">
+      <mat-header-cell *matHeaderCellDef> Acciones </mat-header-cell>
+      <mat-cell *matCellDef="let cliente">
+        <button mat-button (click)="loadClienteToEdit(cliente)">Editar</button>
+        <button mat-button color="warn" (click)="deleteCliente(cliente.id)">Eliminar</button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns.concat('acciones')"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns.concat('acciones')"></mat-row>
+  </mat-table>
+  </mat-card>
+</div>

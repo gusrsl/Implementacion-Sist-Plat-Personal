@@ -1,0 +1,53 @@
+<mat-toolbar class="custom-toolbar" color="primary">
+    <a routerLink="/">
+      <img src="https://i.postimg.cc/SRGWSMj1/GYMLOGO22-removebg-preview.png" alt="Logo de la aplicación" class="logo">
+    </a>
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="menu-button">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/clientes">Clientes</button>
+      <button mat-menu-item routerLink="/coaches">Coaches</button>
+      <button mat-menu-item routerLink="/membresias">Membresías</button>
+      <button mat-menu-item routerLink="/gym">Gym</button>
+      <button mat-menu-item routerLink="/equipo">Equipo</button>
+      <button mat-menu-item routerLink="/clase">Clases</button>
+      <button mat-menu-item routerLink="/asistencia">Asistencia</button>
+    </mat-menu>
+  </mat-toolbar>
+
+<router-outlet></router-outlet>
+
+<footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h2>Contacto</h2>
+        <p>Dirección: 123 Calle Principal, Ciudad</p>
+        <p>Teléfono: (123) 456-7890</p>
+        <p>Email: info@gimnasioapp.com</p>
+      </div>
+  
+      <div class="footer-section">
+        <h2>Enlaces útiles</h2>
+        <mat-nav-list>
+          <a mat-list-item routerLink="/clientes">Clientes</a>
+          <a mat-list-item routerLink="/coaches">Coaches</a>
+          <a mat-list-item routerLink="/membresias">Membresías</a>
+          <a mat-list-item routerLink="/gym">Gym</a>
+          <a mat-list-item routerLink="/equipo">Equipo</a>
+        </mat-nav-list>
+      </div>
+  
+      <div class="footer-section">
+        <h2>Redes Sociales</h2>
+        <mat-icon class="social-icon">facebook</mat-icon>
+        <mat-icon class="social-icon">twitter</mat-icon>
+        <mat-icon class="social-icon">instagram</mat-icon>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      &copy; 2023 Gimnasio App. Todos los derechos reservados.
+    </div>
+  </footer>
+  
