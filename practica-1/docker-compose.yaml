@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: ./back/gym-api # Ruta al directorio del backend
+    ports:
+      - "3000:3000" # Mapeo del puerto del backend
+    depends_on:
+      - database
+    environment:
+      - NODE_ENV=production  # Establece el entorno Node.js como producción (ajusta según tus necesidades)
+    volumes:
+      - ./back/gym-api:/app
+
+  frontend:
+    build:
+      context: ./front/gym-front # Ruta al directorio del frontend
+    ports:
+      - "80:80" # Mapeo del puerto del frontend
+    volumes:
+      - ./front/gym-front:/app
+
+  database:
+    image: mongo:latest # Imagen de MongoDB
+    ports:
+      - "27017:27017" # Mapeo del puerto de MongoDB
