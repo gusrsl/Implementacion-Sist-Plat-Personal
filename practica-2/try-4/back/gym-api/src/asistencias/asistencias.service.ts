@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { CreateAsistenciaDto } from './dto/create-asistencia.dto';
 import { UpdateAsistenciaDto } from './dto/update-asistencia.dto';
 import { InjectModel } from '@nestjs/mongoose';
-import { Asistencia, AsistenciaDocument } from 'src/membresias/entities/asistencias.schema';
+import { Asistencia, AsistenciaDocument } from '../schemas/asistencias.schema';
 import { Model } from 'mongoose';
 
 @Injectable()

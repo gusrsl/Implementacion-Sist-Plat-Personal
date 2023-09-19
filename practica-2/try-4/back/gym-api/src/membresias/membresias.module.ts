@@ -2,8 +2,9 @@ import { Module } from '@nestjs/common';
 import { MembresiasService } from './membresias.service';
 import { MembresiasController } from './membresias.controller';
 import { MongooseModule } from '@nestjs/mongoose';
-import { Membresia, MembresiaSchema } from 'src/schemas/membresias.schema';
+import { Equipos  } from '../schemas/equipos.schema';
 import { GymModule } from 'src/gym/gym.module';
+import { Membresia, MembresiaSchema } from '../schemas/membresias.schema';
 
 @Module({
   imports: [

@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { CreateGymDto } from './dto/create-gym.dto';
 import { UpdateGymDto } from './dto/update-gym.dto';
 import { InjectModel } from '@nestjs/mongoose';
-import { Gym, GymDocument } from 'src/schemas/gym.schema';
+import { Gym, GymDocument } from '../schemas/gym.schema';
 import { Model } from 'mongoose';
 
 @Injectable()

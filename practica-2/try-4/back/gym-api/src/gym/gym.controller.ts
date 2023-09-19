@@ -2,7 +2,7 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { GymService } from './gym.service';
 import { CreateGymDto } from './dto/create-gym.dto';
 import { UpdateGymDto } from './dto/update-gym.dto';
-import { Gym } from 'src/schemas/gym.schema';
+import { Gym } from '../schemas/gym.schema';
 
 @Controller('gym')
 export class GymController {

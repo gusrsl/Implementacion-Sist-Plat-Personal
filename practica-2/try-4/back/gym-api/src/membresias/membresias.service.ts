@@ -3,9 +3,9 @@ import { CreateMembresiaDto } from './dto/create-membresia.dto';
 import { UpdateMembresiaDto } from './dto/update-membresia.dto';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { Membresia, MembresiaSchema, MembresiasDocument } from 'src/schemas/membresias.schema';
+import { Membresia, MembresiaSchema, MembresiasDocument } from '../schemas/membresias.schema';
 import { Gym } from 'src/schemas/gym.schema';
-import { Equipos  } from 'src/schemas/equipos.schema';
+import { Equipos  } from '../schemas/equipos.schema';
 
 @Injectable()
 export class MembresiasService {

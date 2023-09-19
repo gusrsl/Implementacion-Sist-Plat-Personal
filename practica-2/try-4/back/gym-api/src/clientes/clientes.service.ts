@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateClienteDto } from './dto/create-cliente.dto';
 import { UpdateClienteDto } from './dto/update-cliente.dto';
-import { Clientes } from 'src/schemas/clientes.schema';
+import { Clientes } from '../schemas/clientes.schema';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 
@@ -18,7 +18,7 @@ export class ClientesService {
   }
 
   async findAll() {
-    return this.clientesModel.find();
+    return this.clientesModel.find().exec();
   }
 
   async findOne(nombre_cliente: string) {

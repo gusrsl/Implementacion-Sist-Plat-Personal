@@ -2,7 +2,7 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { ClasesService } from './clases.service';
 import { CreateClaseDto } from './dto/create-clase.dto';
 import { UpdateClaseDto } from './dto/update-clase.dto';
-import { Clase } from 'src/schemas/clases.schema';
+import { Clase } from '../schemas/clases.schema';
 
 @Controller('clases')
 export class ClasesController {

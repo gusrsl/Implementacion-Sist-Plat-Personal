@@ -2,7 +2,7 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { MembresiasService } from './membresias.service';
 import { CreateMembresiaDto } from './dto/create-membresia.dto';
 import { UpdateMembresiaDto } from './dto/update-membresia.dto';
-import { Membresia } from 'src/schemas/membresias.schema';
+import { Membresia } from '../schemas/membresias.schema';
 
 @Controller('membresias')
 export class MembresiasController {

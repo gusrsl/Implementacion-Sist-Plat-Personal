@@ -2,7 +2,7 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { EquiposService } from './equipos.service';
 import { CreateEquipoDto } from './dto/create-equipo.dto';
 import { UpdateEquipoDto } from './dto/update-equipo.dto';
-import { Equipos  } from 'src/schemas/equipos.schema';
+import { Equipos } from '../schemas/equipos.schema';
 
 @Controller('equipos')
 export class EquiposController {

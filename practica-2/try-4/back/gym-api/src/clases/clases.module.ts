@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { ClasesService } from './clases.service';
 import { ClasesController } from './clases.controller';
 import { MongooseModule } from '@nestjs/mongoose';
-import { Clase, ClaseSchema } from 'src/schemas/clases.schema';
+import { Clase, ClaseSchema } from '../schemas/clases.schema';
 import { CoachesModule } from 'src/coaches/coaches.module';
 import { MembresiasModule } from 'src/membresias/membresias.module';
 

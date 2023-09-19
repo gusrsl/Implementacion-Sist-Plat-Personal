@@ -2,7 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateCoachDto } from './dto/create-coach.dto';
 import { UpdateCoachDto } from './dto/update-coach.dto';
 import { InjectModel } from '@nestjs/mongoose';
-import { Coaches } from 'src/schemas/coaches.schema';
+import { Coaches } from '../schemas/coaches.schema';
 import { Model } from 'mongoose';
 import { Coach } from './entities/coach.entity';
 

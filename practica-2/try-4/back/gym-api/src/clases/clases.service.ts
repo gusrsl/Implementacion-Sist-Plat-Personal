@@ -2,7 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateClaseDto } from './dto/create-clase.dto';
 import { UpdateClaseDto } from './dto/update-clase.dto';
 import { InjectModel } from '@nestjs/mongoose';
-import { Clase } from 'src/schemas/clases.schema';
+import { Clase } from '../schemas/clases.schema';
 import { Model } from 'mongoose';
 import { Membresia } from 'src/schemas/membresias.schema';
 import { Coaches } from 'src/schemas/coaches.schema';

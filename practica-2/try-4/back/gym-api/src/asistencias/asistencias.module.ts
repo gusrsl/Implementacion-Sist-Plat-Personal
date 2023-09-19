@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { AsistenciasService } from './asistencias.service';
 import { AsistenciasController } from './asistencias.controller';
 import { MongooseModule } from '@nestjs/mongoose';
-import { Asistencia, AsistenciaSchema } from 'src/membresias/entities/asistencias.schema';
+import { Asistencia, AsistenciaSchema } from 'src/schemas/asistencias.schema';
 
 @Module({
   imports: [

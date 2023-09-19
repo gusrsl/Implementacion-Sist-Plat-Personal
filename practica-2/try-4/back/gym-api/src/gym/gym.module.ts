@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { GymService } from './gym.service';
 import { GymController } from './gym.controller';
 import { MongooseModule } from '@nestjs/mongoose';
-import { Gym, GymSchema } from 'src/schemas/gym.schema';
+import { Gym, GymSchema } from '../schemas/gym.schema';
 
 @Module({
   imports: [
