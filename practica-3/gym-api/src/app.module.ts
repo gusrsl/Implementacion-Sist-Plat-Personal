@@ -15,8 +15,7 @@ import { AsistenciasModule } from './asistencias/asistencias.module';
 @Module({
   imports: [
     ClientesModule,
-    MongooseModule.forRoot('mongodb+srv://gustavoemilio:admin123@cluster0.fvrbdh3.mongodb.net/?retryWrites=true&w=majority'),
-    MongooseModule.forFeature([{ name: Clientes.name, schema: ClientesSchema }]),
+    MongooseModule.forRoot(process.env.MONGODB_URI),
     CoachesModule,
     MembresiasModule,
     GymModule,

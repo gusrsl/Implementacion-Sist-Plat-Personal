@@ -8,7 +8,7 @@ import { MembresiasModule } from 'src/membresias/membresias.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb+srv://gustavoemilio:admin123@cluster0.fvrbdh3.mongodb.net/?retryWrites=true&w=majority'),
+    MongooseModule.forRoot(process.env.MONGODB_URI), // Utiliza la variable de entorno MONGODB_URI
     MongooseModule.forFeature([{ name: Clase.name, schema: ClaseSchema }]),
     CoachesModule, 
     MembresiasModule
